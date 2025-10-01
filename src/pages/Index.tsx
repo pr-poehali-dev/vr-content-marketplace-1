@@ -21,16 +21,49 @@ const Index = () => {
   }));
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
-        <div className="container flex h-16 items-center justify-between px-4 md:px-8 max-w-[1400px] mx-auto">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="text-2xl font-heading font-bold tracking-tight">
+    <div className="min-h-screen bg-background text-foreground flex">
+      {/* Левая боковая панель */}
+      <aside className="w-48 bg-background border-r border-border flex flex-col fixed left-0 top-0 bottom-0 z-50">
+        <div className="p-6 border-b border-border">
+          <Link to="/" className="block">
+            <div className="text-2xl font-heading font-bold tracking-tight leading-tight">
               <span className="text-primary">FUR</span>
               <br />
-              <span className="text-foreground text-sm">HORIZON</span>
+              <span className="text-foreground text-base">HORIZON</span>
             </div>
           </Link>
+        </div>
+
+        <div className="flex-1"></div>
+
+        <div className="p-6 border-t border-border">
+          <div className="space-y-3 text-xs text-muted-foreground mb-4">
+            <Link to="/about" className="block hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link to="/about" className="block hover:text-foreground transition-colors">Contact us</Link>
+            <Link to="/about" className="block hover:text-foreground transition-colors">Support</Link>
+          </div>
+          
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-foreground">
+              <Icon name="Twitter" size={16} />
+            </Button>
+            <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-foreground">
+              <Icon name="Facebook" size={16} />
+            </Button>
+            <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-foreground">
+              <Icon name="Instagram" size={16} />
+            </Button>
+            <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-foreground">
+              <Icon name="Linkedin" size={16} />
+            </Button>
+          </div>
+        </div>
+      </aside>
+
+      {/* Основной контент */}
+      <div className="flex-1 ml-48">
+        <header className="sticky top-0 z-40 w-full border-b border-border bg-background/95 backdrop-blur">
+          <div className="flex h-16 items-center justify-between px-8">
 
           <div className="flex items-center gap-6 flex-1 justify-center max-w-2xl mx-8">
             <div className="flex items-center gap-2 bg-muted/50 rounded-lg px-4 py-2 flex-1">
@@ -81,7 +114,7 @@ const Index = () => {
         </div>
       </header>
 
-      <main className="container px-4 md:px-8 py-12 max-w-[1400px] mx-auto">
+      <main className="px-8 py-12">
         <section className="mb-12">
           <div className="mb-2 text-sm text-muted-foreground">Store</div>
           <h1 className="text-5xl md:text-6xl font-heading font-bold mb-4 text-primary">
@@ -301,33 +334,7 @@ const Index = () => {
           </Button>
         </section>
       </main>
-
-      <footer className="border-t border-border mt-20">
-        <div className="container px-4 md:px-8 py-8 max-w-[1400px] mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <Link to="/about" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-              <Link to="/about" className="hover:text-foreground transition-colors">Contact us</Link>
-              <Link to="/about" className="hover:text-foreground transition-colors">Support</Link>
-            </div>
-            
-            <div className="flex items-center gap-4">
-              <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
-                <Icon name="Twitter" size={18} />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
-                <Icon name="Facebook" size={18} />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
-                <Icon name="Instagram" size={18} />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
-                <Icon name="Linkedin" size={18} />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </footer>
+      </div>
     </div>
   );
 };
