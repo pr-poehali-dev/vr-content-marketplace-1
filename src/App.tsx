@@ -10,6 +10,9 @@ import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import ResetPassword from "./pages/ResetPassword";
+import About from "./pages/About";
+import Profile from "./pages/Profile";
 import ProfileBuyer from "./pages/ProfileBuyer";
 import ProfileAuthor from "./pages/ProfileAuthor";
 import ProfileAdmin from "./pages/ProfileAdmin";
@@ -30,6 +33,9 @@ const App = () => (
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/profile/buyer" element={<ProfileBuyer />} />
           <Route path="/profile/author" element={<ProfileAuthor />} />
           <Route path="/profile/admin" element={<ProfileAdmin />} />
