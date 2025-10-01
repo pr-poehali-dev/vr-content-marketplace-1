@@ -177,8 +177,8 @@ const Catalog = () => {
 
                       <div className="flex items-center justify-between">
                         <span className="text-xl font-bold text-primary">{product.price} ₽</span>
-                        <Button size="sm" className="bg-primary hover:bg-primary/90 text-white">
-                          <Icon name="ShoppingCart" size={14} className="mr-1" />
+                        <Button size="sm" className="bg-gradient-to-br from-primary to-primary/70 hover:from-primary/90 hover:to-primary/60 text-primary-foreground shadow-lg">
+                          <Icon name="ShoppingCart" size={14} className="mr-1 text-primary-foreground" />
                           Купить
                         </Button>
                       </div>
@@ -197,7 +197,7 @@ const Catalog = () => {
                   <Button 
                     key={page}
                     variant={page === 1 ? "default" : "outline"}
-                    className={page === 1 ? "bg-primary text-white" : ""}
+                    className={page === 1 ? "bg-gradient-to-br from-primary to-primary/70 hover:from-primary/90 hover:to-primary/60 text-primary-foreground shadow-lg" : ""}
                   >
                     {page}
                   </Button>
