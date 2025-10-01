@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -89,8 +90,8 @@ const Index = () => {
             </div>
             
             <nav className="hidden md:flex items-center gap-6">
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Главная</a>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Каталог</a>
+              <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">Главная</Link>
+              <Link to="/catalog" className="text-sm font-medium hover:text-primary transition-colors">Каталог</Link>
               <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Авторы</a>
               <a href="#" className="text-sm font-medium hover:text-primary transition-colors">О нас</a>
             </nav>
@@ -105,18 +106,22 @@ const Index = () => {
               />
             </div>
 
-            <Button variant="ghost" size="icon" className="relative">
-              <Icon name="ShoppingCart" size={20} />
-              {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-destructive text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                  {cartCount}
-                </span>
-              )}
-            </Button>
+            <Link to="/cart">
+              <Button variant="ghost" size="icon" className="relative">
+                <Icon name="ShoppingCart" size={20} />
+                {cartCount > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-destructive text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                    {cartCount}
+                  </span>
+                )}
+              </Button>
+            </Link>
 
-            <Button variant="ghost" size="icon">
-              <Icon name="User" size={20} />
-            </Button>
+            <Link to="/login">
+              <Button variant="ghost" size="icon">
+                <Icon name="User" size={20} />
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
@@ -132,14 +137,18 @@ const Index = () => {
               Открой мир уникальных аватаров, миров, шейдеров и одежды от лучших авторов сообщества
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
-                <Icon name="Rocket" size={20} className="mr-2" />
-                Начать исследование
-              </Button>
-              <Button size="lg" variant="outline" className="px-8">
-                <Icon name="Palette" size={20} className="mr-2" />
-                Стать автором
-              </Button>
+              <Link to="/catalog">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
+                  <Icon name="Rocket" size={20} className="mr-2" />
+                  Начать исследование
+                </Button>
+              </Link>
+              <Link to="/register">
+                <Button size="lg" variant="outline" className="px-8">
+                  <Icon name="Palette" size={20} className="mr-2" />
+                  Стать автором
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
