@@ -49,7 +49,7 @@ const ResetPassword = () => {
                 />
               </div>
 
-              <Button className="w-full bg-primary hover:bg-primary/90 text-white h-11">
+              <Button className="w-full bg-gradient-to-br from-primary to-primary/70 hover:from-primary/90 hover:to-primary/60 text-primary-foreground h-11 shadow-lg">
                 Отправить инструкции
               </Button>
 

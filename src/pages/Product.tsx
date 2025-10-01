@@ -210,7 +210,7 @@ const Product = () => {
               </div>
 
               <div className="space-y-3">
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white h-12 text-lg">
+                <Button className="w-full bg-gradient-to-br from-primary to-primary/70 hover:from-primary/90 hover:to-primary/60 text-primary-foreground h-12 text-lg shadow-lg">
                   <Icon name="ShoppingCart" size={20} className="mr-2" />
                   Купить сейчас
                 </Button>

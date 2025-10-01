@@ -73,7 +73,7 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/catalog">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
+              <Button size="lg" className="bg-gradient-to-br from-primary to-primary/70 hover:from-primary/90 hover:to-primary/60 text-primary-foreground px-8 shadow-lg">
                 <Icon name="Store" size={20} className="mr-2" />
                 Начать покупки
               </Button>
