@@ -24,19 +24,19 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground flex">
       {/* Левая боковая панель */}
       <aside className="w-48 bg-background border-r border-border flex flex-col fixed left-0 top-0 bottom-0 z-50">
-        <div className="p-6 border-b border-border">
+        <div className="px-6 py-8">
           <Link to="/" className="block">
-            <div className="text-2xl font-heading font-bold tracking-tight leading-tight">
-              <span className="text-primary">FUR</span>
-              <br />
-              <span className="text-foreground text-base">HORIZON</span>
-            </div>
+            <img 
+              src="https://cdn.poehali.dev/files/7e8fc82b-9fdf-403b-b93b-41d5afc86301.png" 
+              alt="FUR Logo" 
+              className="w-full h-auto"
+            />
           </Link>
         </div>
 
         <div className="flex-1"></div>
 
-        <div className="p-6 border-t border-border">
+        <div className="px-6 py-8">
           <div className="space-y-3 text-xs text-muted-foreground mb-4">
             <Link to="/about" className="block hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link to="/about" className="block hover:text-foreground transition-colors">Contact us</Link>
@@ -74,7 +74,7 @@ const Index = () => {
               />
             </div>
 
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-6">
+            <Button className="bg-gradient-to-br from-primary to-primary/70 hover:from-primary/90 hover:to-primary/60 text-primary-foreground font-medium px-6 shadow-lg">
               Create content
             </Button>
           </div>
@@ -287,7 +287,7 @@ const Index = () => {
           </div>
 
           <Button 
-            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold h-12"
+            className="w-full bg-gradient-to-br from-primary to-primary/70 hover:from-primary/90 hover:to-primary/60 text-primary-foreground font-semibold h-12 shadow-lg"
           >
             Show more
           </Button>
@@ -328,7 +328,7 @@ const Index = () => {
           </div>
 
           <Button 
-            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold h-12"
+            className="w-full bg-gradient-to-br from-primary to-primary/70 hover:from-primary/90 hover:to-primary/60 text-primary-foreground font-semibold h-12 shadow-lg"
           >
             Show more
           </Button>
