@@ -152,7 +152,7 @@ const ProfileAuthor = () => {
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-heading font-bold">Мои товары</h2>
               <Button className="bg-gradient-to-br from-primary to-primary/70 hover:from-primary/90 hover:to-primary/60 text-primary-foreground shadow-lg">
-                <Icon name="Plus" size={16} className="mr-2" />
+                <Icon name="Plus" size={16} className="mr-2 text-primary-foreground" />
                 Добавить товар
               </Button>
             </div>
